@@ -49,6 +49,7 @@ const NikahInvitation = () => {
     alt="rose" 
     className={`absolute w-200 h-200 ${className}`} 
     style={style}
+    viewBox="0 0 100 100"
   />
 );
   // const Rose = ({ className = "", style = {} }) => (
@@ -70,8 +71,10 @@ const NikahInvitation = () => {
     <div className="min-h-screen bg-gradient-to-b from-green-50 via-white to-green-50 text-gray-800 relative overflow-hidden">
       {ornamentPattern}
       
-      {/* Декоративные розы */}
-      <Rose className="top-[50vh] left-20 opacity-40 z-10" style={{ transform: `translateY(${scrollY * 0.2}px)` }} />
+      {/* Декоративные розы
+      <div className="fixed top-[75vh] left-1/2 -translate-x-1/2 z-10 pointer-events-none" style={{ transform: `translateY(-50%, ${scrollY * 0.1}px)` }}>
+        <Rose className="opacity-40" />
+      </div> */}
 
       {/* <Rose className="top-40 right-20 opacity-30" style={{ transform: `translateY(${scrollY * 0.15}px)` }} />
       <Rose className="bottom-40 left-20 opacity-35" style={{ transform: `translateY(${-scrollY * 0.1}px)` }} />
