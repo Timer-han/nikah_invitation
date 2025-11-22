@@ -44,29 +44,38 @@ const NikahInvitation = () => {
   );
 
   const Rose = ({ className = "", style = {} }) => (
-    <div className={`absolute ${className}`} style={style}>
-      <svg width="80" height="80" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="15" fill="#f5f5dc" opacity="0.9"/>
-        <circle cx="50" cy="50" r="10" fill="#fffef0" opacity="0.8"/>
-        <ellipse cx="35" cy="45" rx="12" ry="15" fill="#f5f5dc" opacity="0.7" transform="rotate(-30 35 45)"/>
-        <ellipse cx="65" cy="45" rx="12" ry="15" fill="#f5f5dc" opacity="0.7" transform="rotate(30 65 45)"/>
-        <ellipse cx="50" cy="30" rx="12" ry="15" fill="#ede8d0" opacity="0.7"/>
-        <ellipse cx="50" cy="65" rx="12" ry="15" fill="#f5f5dc" opacity="0.7"/>
-        <ellipse cx="38" cy="60" rx="10" ry="13" fill="#ede8d0" opacity="0.6" transform="rotate(-45 38 60)"/>
-        <ellipse cx="62" cy="60" rx="10" ry="13" fill="#ede8d0" opacity="0.6" transform="rotate(45 62 60)"/>
-      </svg>
-    </div>
-  );
+  <img 
+    src="/images/rose.png" 
+    alt="rose" 
+    className={`absolute w-200 h-200 ${className}`} 
+    style={style}
+  />
+);
+  // const Rose = ({ className = "", style = {} }) => (
+  //   <div className={`absolute ${className}`} style={style}>
+  //     <svg width="80" height="80" viewBox="0 0 100 100">
+  //       <circle cx="50" cy="50" r="15" fill="#f5f5dc" opacity="0.9"/>
+  //       <circle cx="50" cy="50" r="10" fill="#fffef0" opacity="0.8"/>
+  //       <ellipse cx="35" cy="45" rx="12" ry="15" fill="#f5f5dc" opacity="0.7" transform="rotate(-30 35 45)"/>
+  //       <ellipse cx="65" cy="45" rx="12" ry="15" fill="#f5f5dc" opacity="0.7" transform="rotate(30 65 45)"/>
+  //       <ellipse cx="50" cy="30" rx="12" ry="15" fill="#ede8d0" opacity="0.7"/>
+  //       <ellipse cx="50" cy="65" rx="12" ry="15" fill="#f5f5dc" opacity="0.7"/>
+  //       <ellipse cx="38" cy="60" rx="10" ry="13" fill="#ede8d0" opacity="0.6" transform="rotate(-45 38 60)"/>
+  //       <ellipse cx="62" cy="60" rx="10" ry="13" fill="#ede8d0" opacity="0.6" transform="rotate(45 62 60)"/>
+  //     </svg>
+  //   </div>
+  // );
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 via-white to-green-50 text-gray-800 relative overflow-hidden">
       {ornamentPattern}
       
       {/* Декоративные розы */}
-      <Rose className="top-20 left-10 opacity-40" style={{ transform: `translateY(${scrollY * 0.1}px)` }} />
-      <Rose className="top-40 right-20 opacity-30" style={{ transform: `translateY(${scrollY * 0.15}px)` }} />
+      <Rose className="top-[50vh] left-20 opacity-40 z-10" style={{ transform: `translateY(${scrollY * 0.2}px)` }} />
+
+      {/* <Rose className="top-40 right-20 opacity-30" style={{ transform: `translateY(${scrollY * 0.15}px)` }} />
       <Rose className="bottom-40 left-20 opacity-35" style={{ transform: `translateY(${-scrollY * 0.1}px)` }} />
-      <Rose className="bottom-60 right-10 opacity-25" style={{ transform: `translateY(${-scrollY * 0.12}px)` }} />
+      <Rose className="bottom-60 right-10 opacity-25" style={{ transform: `translateY(${-scrollY * 0.12}px)` }} /> */}
 
       {/* Басмала */}
       <section className="min-h-screen flex items-center justify-center relative z-10 px-4">
@@ -121,11 +130,11 @@ const NikahInvitation = () => {
                   <div>
                     <h3 className="font-medium text-lg text-emerald-800 mb-2">Урын / Место:</h3>
                     <p className="text-gray-700 leading-relaxed">
-                      [Адрес будет указан позже]
+                      Никах центр Эмиз
                       <br />
-                      Казан шәһәре
+                      Казан шәһәре, Сафиуллина урамы, 29
                       <br />
-                      г. Казань
+                      г. Казань, улица Сафиуллина, 29
                     </p>
                   </div>
                 </div>
@@ -137,9 +146,9 @@ const NikahInvitation = () => {
                   <div>
                     <h3 className="font-medium text-lg text-emerald-800 mb-2">Вакыт / Время:</h3>
                     <p className="text-gray-700 leading-relaxed">
-                      [Дата будет указана позже]
+                      Дата: 02.01.2026
                       <br />
-                      [Время начала]
+                      Время: 16:00
                     </p>
                   </div>
                 </div>
@@ -214,11 +223,11 @@ const NikahInvitation = () => {
                 Предпочтительна светлая однотонная одежда пастельных тонов
               </p>
               <div className="flex justify-center space-x-4 mt-6">
-                <div className="w-16 h-16 rounded-full bg-green-100 border-2 border-emerald-200"></div>
-                <div className="w-16 h-16 rounded-full bg-blue-50 border-2 border-blue-200"></div>
-                <div className="w-16 h-16 rounded-full bg-pink-50 border-2 border-pink-200"></div>
+                <div className="w-16 h-16 rounded-full bg-cyan-100 border-2 border-cyan-200"></div>
+                <div className="w-16 h-16 rounded-full bg-lime-100 border-2 border-lime-200"></div>
+                <div className="w-16 h-16 rounded-full bg-yellow-50 border-2 border-yellow-200"></div>
                 <div className="w-16 h-16 rounded-full bg-amber-50 border-2 border-amber-200"></div>
-                <div className="w-16 h-16 rounded-full bg-purple-50 border-2 border-purple-200"></div>
+                <div className="w-16 h-16 rounded-full bg-orange-50 border-2 border-orange-200"></div>
               </div>
             </div>
           </div>
@@ -238,7 +247,7 @@ const NikahInvitation = () => {
             
             <div className="grid md:grid-cols-2 gap-6">
               <a 
-                href="#" 
+                href="https://t.me/+0-cOTu8QNARkY2Ri" 
                 className="group bg-gradient-to-br from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white rounded-2xl p-8 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
               >
                 <div className="flex flex-col items-center space-y-4">
