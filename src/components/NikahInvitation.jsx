@@ -4,6 +4,7 @@ import { Heart, Clock, MapPin, Users, Phone } from 'lucide-react';
 const NikahInvitation = () => {
   const [scrollY, setScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState({});
+  const [showEasterEgg, setShowEasterEgg] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -104,7 +105,12 @@ const NikahInvitation = () => {
 
           <div className="flex justify-center items-center space-x-4 my-8">
             <div className="h-px w-20 bg-gradient-to-r from-transparent to-emerald-300"></div>
-            <Heart className="text-rose-300" size={32} fill="currentColor" />
+            <Heart
+              className="text-rose-300 cursor-pointer hover:scale-110 transition-transform duration-300"
+              size={32}
+              fill="currentColor"
+              onClick={() => setShowEasterEgg(true)}
+            />
             <div className="h-px w-20 bg-gradient-to-l from-transparent to-emerald-300"></div>
           </div>
 
@@ -301,10 +307,58 @@ const NikahInvitation = () => {
         </p>
       </footer>
 
+      {/* Пасхалка */}
+      {showEasterEgg && (
+        <div
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          onClick={() => setShowEasterEgg(false)}
+        >
+          <div
+            className="bg-white rounded-3xl p-8 md:p-12 max-w-2xl mx-auto shadow-2xl transform transition-all duration-500 ease-out scale-95 opacity-80 animate-fadeInUp"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="text-center space-y-6">
+              <div className="text-6xl">💝</div>
+              <h3 className="text-3xl font-light text-emerald-800">
+                Пасхалка 3: "тук-тук"
+              </h3>
+              <p className="text-xl text-gray-700 leading-relaxed">
+                Җанибәков эффекты кечкенә генә импульстан гыйбарәт, ул ахыр чиктә бар нәрсәне астын-өскә китерә. Никах – ин шәә Аллаһ, безнең тормышта абсолют яңа этапның башы һәм тирә-яктагы чынбарлыкта шундый эффектның менә дигән мисалы. Аллаһ ризалыгы өчен безнең өчен дога кылыгыз!
+                <br />
+                <span className="text-emerald-600">— Минем фикерләрем</span>
+              </p>
+              <p className="text-lg text-gray-600 italic">
+                Эффект Джанибекова заключается в маленьком импульсе, который в конечном итоге переворачивает всё с ног наголову. Никах - это, ин шәә Аллаһ, начало абсолютно нового этапа в нашей жизни, отличный пример такого эффекта в окружающей нас реальности. Сделайте за нас дуа, ради Аллаха🤲🏽
+              </p>
+              <button
+                onClick={() => setShowEasterEgg(false)}
+                className="mt-6 px-8 py-3 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white rounded-full hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Ябу / Закрыть
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+      
       <style jsx>{`
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(20px); }
           to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeInUp {
+          from { 
+            opacity: 0; 
+            transform: translateY(30px) scale(0.95); 
+          }
+          to { 
+            opacity: 1; 
+            transform: translateY(0) scale(1); 
+          }
+        }
+        .animate-fadeInUp {
+          animation: fadeInUp 0.4s ease-out forwards;
         }
       `}</style>
     </div>
