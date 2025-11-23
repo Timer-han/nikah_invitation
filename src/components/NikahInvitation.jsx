@@ -221,9 +221,9 @@ const NikahInvitation = () => {
                 Төсләр / Цвета
               </h3>
               <p className="text-gray-700 text-center leading-relaxed">
-                Ачык пастель төсләрдәге бертөсле кием өстенлек бирелә
+                Кызлар өчен ачык пастель төсләрдәге бертөсле кием өстенлек бирелә
                 <br />
-                Предпочтительна светлая однотонная одежда пастельных тонов
+                Для девушек предпочтительна светлая однотонная одежда пастельных тонов
               </p>
               <div className="flex justify-center space-x-4 mt-6">
                 <div className="w-16 h-16 rounded-full bg-cyan-100 border-2 border-cyan-200"></div>
@@ -266,7 +266,7 @@ const NikahInvitation = () => {
               </a>
 
               <a 
-                href="#" 
+                href="https://t.me/+zOdFMslqZ-Q3M2Ey" 
                 className="group bg-gradient-to-br from-rose-400 to-rose-500 hover:from-rose-500 hover:to-rose-600 text-white rounded-2xl p-8 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
               >
                 <div className="flex flex-col items-center space-y-4">
